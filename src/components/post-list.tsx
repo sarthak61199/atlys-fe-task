@@ -6,8 +6,16 @@ function PostList() {
 
   return (
     <div className="flex flex-col gap-7 pb-8">
-      {posts.map((post) => (
-        <PostCard key={post.id} {...post} />
+      {posts.map((post, index) => (
+        <div
+          key={post.id}
+          className="post-card-enter"
+          style={{
+            animationDelay: `${index * 150}ms`
+          }}
+        >
+          <PostCard {...post} />
+        </div>
       ))}
     </div>
   );

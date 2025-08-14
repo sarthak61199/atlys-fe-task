@@ -46,9 +46,9 @@ const BottomBar = memo(function BottomBar({
       <button
         onClick={onSubmit}
         disabled={disabled}
-        className={`${
-          disabled ? "opacity-50 cursor-not-allowed" : "hover:opacity-80"
-        }`}
+        className={
+          "disabled:opacity-50 disabled:cursor-not-allowed hover:opacity-80 cursor-pointer hover:scale-105 transition-transform duration-300"
+        }
       >
         <img src={sendIcon} alt="Send" className="size-6 text-white" />
       </button>

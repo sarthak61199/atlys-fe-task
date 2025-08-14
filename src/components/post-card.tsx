@@ -19,7 +19,7 @@ function PostCard({ author, timeAgo, content, image }: PostCardProps) {
   };
 
   return (
-    <div className="bg-[#EBEBEB] p-2 pb-0 rounded-3xl min-w-[500px]">
+    <div className="bg-[#EBEBEB] p-2 pb-0 rounded-3xl min-w-[500px] post-card">
       <div className="flex flex-col bg-white rounded-2xl p-4">
         <div className="grid grid-cols-[50px_1fr] gap-y-3">
           <img
