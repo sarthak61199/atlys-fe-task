@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import { Input } from "./ui/input";
 import login from "../assets/icons/login.svg";
 
 function SignUpForm() {
@@ -13,42 +14,27 @@ function SignUpForm() {
           Create an account to access all the features on this app
         </p>
         <form className="mt-16 flex flex-col gap-4 w-full">
-          <div className="flex flex-col gap-2">
-            <label htmlFor="emailOrUsername" className="text-sm font-semibold">
-              Email or username
-            </label>
-            <input
-              type="text"
-              placeholder="Enter your email or username"
-              name="emailOrUsername"
-              id="emailOrUsername"
-              className="text-sm bg-[#F4F4F4] p-4 rounded-xl placeholder:text-sm"
-            />
-          </div>
-          <div className="flex flex-col gap-2">
-            <label htmlFor="password" className="text-sm font-semibold">
-              Password
-            </label>
-            <input
-              type="password"
-              placeholder="Enter your password"
-              name="password"
-              id="password"
-              className="text-sm bg-[#F4F4F4] p-4 rounded-xl placeholder:text-sm"
-            />
-          </div>
-          <div className="flex flex-col gap-2">
-            <label htmlFor="repeatPassword" className="text-sm font-semibold">
-              Repeat password
-            </label>
-            <input
-              type="password"
-              placeholder="Enter your password again"
-              name="repeatPassword"
-              id="repeatPassword"
-              className="text-sm bg-[#F4F4F4] p-4 rounded-xl placeholder:text-sm"
-            />
-          </div>
+          <Input
+            type="text"
+            placeholder="Enter your email or username"
+            name="emailOrUsername"
+            id="emailOrUsername"
+            label="Email or username"
+          />
+          <Input
+            type="password"
+            placeholder="Enter your password"
+            name="password"
+            id="password"
+            label="Password"
+          />
+          <Input
+            type="password"
+            placeholder="Enter your password again"
+            name="repeatPassword"
+            id="repeatPassword"
+            label="Repeat password"
+          />
           <button className="mb-4 w-full bg-[#5057EA] text-white py-4 rounded-xl text-sm mt-1">
             Sign Up
           </button>
