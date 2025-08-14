@@ -13,7 +13,7 @@ Built using ReactJS using Vite as the build tool, TypeScript and TailwindCSS wit
 ## Notes
 
 - There are 3 pages in this app.
-  - /sign-in page to login
+  - /sign-in page to login (use test accounts provided which were provided to sign in)
   - /sign-up page to signup
   - / which is our feed
 - There is no input validation on authentication forms except sign-up page which just checks if the password matches the confirm password field.
