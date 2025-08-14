@@ -1,69 +1,26 @@
-# React + TypeScript + Vite
+# foo-rum
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Live URL - https://atlys-fe-task.vercel.app/
 
-Currently, two official plugins are available:
+Built using ReactJS using Vite as the build tool, TypeScript and TailwindCSS without using any libraries.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Steps to run locally
 
-## Expanding the ESLint configuration
+- Clone the repository `git clone https://github.com/sarthak61199/atlys-fe-task.git`
+- Run `npm i` to install dependencies
+- Run `npm run dev` to start the dev server
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Notes
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- There are 3 pages in this app.
+  - /sign-in page to login
+  - /sign-up page to signup
+  - / which is our feed
+- There is no input validation on authentication forms except sign-up page which just checks if the password matches the confirm password field.
+- The signup flow itself just checks if the email is not registered already. If it's not then it logs in the user and redirects to feed page.
+- The user (test accounts which were provided) and post data is hardcoded in data.json file. New posts are kept in state and are not persisted anywhere and is lost if the user refreshes.
+- Similarly the authentication state is also stored in memory and the user will have to login again if the page refreshes.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## Challenges
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+One challenge I faced was ensuring that the mechanism for opening the authentication dialog on the feed page, triggered by user interaction, was centralized and offered a good developer experience. I wanted to avoid prop drilling, as it can impact performance and become tedious to manage as the project grows. I think the current implementation is nice starting point to scale it further as all the logic is centralized in context.
