@@ -1,5 +1,5 @@
 import { useState, type ChangeEvent, type FormEvent } from "react";
-import { Link, useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 import login from "../assets/icons/login.svg";
 import { useAuth } from "../contexts/auth-context";
 import { Input } from "./ui/input";
@@ -79,22 +79,13 @@ function SignInForm() {
       </div>
       <p className="text-center py-4 text-sm">
         Do not have and account?{" "}
-        {isDialogMode ? (
-          <button
-            type="button"
-            onClick={handleSwitchToSignUp}
-            className="text-[#5057EA] font-semibold bg-transparent border-none cursor-pointer hover:underline"
-          >
-            Sign up
-          </button>
-        ) : (
-          <Link
-            to="/sign-up"
-            className="text-[#5057EA] font-semibold cursor-pointer hover:underline"
-          >
-            Sign up
-          </Link>
-        )}
+        <button
+          type="button"
+          onClick={handleSwitchToSignUp}
+          className="text-[#5057EA] font-semibold bg-transparent border-none cursor-pointer hover:underline"
+        >
+          Sign up
+        </button>
       </p>
     </div>
   );
