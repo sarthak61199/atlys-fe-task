@@ -4,12 +4,13 @@ interface DialogProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
   children: ReactNode;
+  disableInteraction?: boolean;
 }
 
-const Dialog = ({ open, onOpenChange, children }: DialogProps) => {
+const Dialog = ({ open, onOpenChange, children, disableInteraction = false }: DialogProps) => {
   useEffect(() => {
     const handleEscape = (event: KeyboardEvent) => {
-      if (event.key === "Escape" && open) {
+      if (event.key === "Escape" && open && !disableInteraction) {
         onOpenChange(false);
       }
     };
@@ -30,8 +31,8 @@ const Dialog = ({ open, onOpenChange, children }: DialogProps) => {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">
       <div
-        className="absolute inset-0 bg-black/50 backdrop-blur-sm"
-        onClick={() => onOpenChange(false)}
+        className="absolute inset-0 bg-black/50"
+        onClick={() => !disableInteraction && onOpenChange(false)}
         aria-hidden="true"
       />
 
