@@ -7,7 +7,7 @@ import { Input } from "./ui/input";
 function SignInForm() {
   const navigate = useNavigate();
 
-  const { signIn } = useAuth();
+  const { signIn, switchAuthMode, isDialogMode } = useAuth();
   const [credentials, setCredentials] = useState({
     emailOrUsername: "",
     password: "",
@@ -23,7 +23,17 @@ function SignInForm() {
     const result = signIn(credentials.emailOrUsername, credentials.password);
 
     if (result) {
-      navigate("/");
+      if (!isDialogMode) {
+        navigate("/");
+      }
+    }
+  };
+
+  const handleSwitchToSignUp = () => {
+    if (isDialogMode) {
+      switchAuthMode("sign-up");
+    } else {
+      navigate("/sign-up");
     }
   };
 
@@ -56,16 +66,35 @@ function SignInForm() {
             value={credentials.password}
             onChange={handleChange}
           />
-          <button className="mb-4 w-full bg-[#5057EA] text-white py-4 rounded-xl text-sm mt-1">
+          <button
+            className="mb-4 w-full bg-[#5057EA] text-white py-4 rounded-xl text-sm mt-1 disabled:bg-[#5057EA]/50 disabled:cursor-not-allowed"
+            disabled={
+              !credentials.emailOrUsername.trim() ||
+              !credentials.password.trim()
+            }
+          >
             Sign In
           </button>
         </form>
       </div>
       <p className="text-center py-4 text-sm">
         Do not have and account?{" "}
-        <Link to="/sign-up" className="text-[#5057EA] font-semibold">
-          Sign up
-        </Link>
+        {isDialogMode ? (
+          <button
+            type="button"
+            onClick={handleSwitchToSignUp}
+            className="text-[#5057EA] font-semibold bg-transparent border-none cursor-pointer hover:underline"
+          >
+            Sign up
+          </button>
+        ) : (
+          <Link
+            to="/sign-up"
+            className="text-[#5057EA] font-semibold cursor-pointer hover:underline"
+          >
+            Sign up
+          </Link>
+        )}
       </p>
     </div>
   );

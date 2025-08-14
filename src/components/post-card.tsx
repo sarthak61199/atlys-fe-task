@@ -1,6 +1,8 @@
 import heart from "../assets/icons/heart.svg";
 import message from "../assets/icons/message.svg";
 import share from "../assets/icons/share.svg";
+import { useAuth } from "../contexts/auth-context";
+import { alert } from "../lib/alert";
 
 interface PostCardProps {
   author: string;
@@ -10,6 +12,12 @@ interface PostCardProps {
 }
 
 function PostCard({ author, timeAgo, content, image }: PostCardProps) {
+  const { requireAuth } = useAuth();
+  
+  const handleAction = () => {
+    requireAuth(alert);
+  };
+
   return (
     <div className="bg-[#EBEBEB] p-2 pb-0 rounded-3xl min-w-[500px]">
       <div className="flex flex-col bg-white rounded-2xl p-4">
@@ -30,9 +38,15 @@ function PostCard({ author, timeAgo, content, image }: PostCardProps) {
         </div>
       </div>
       <div className="flex gap-7 p-3">
-        <img src={heart} alt="Heart" />
-        <img src={message} alt="Message" />
-        <img src={share} alt="Share" />
+        <button onClick={handleAction}>
+          <img src={heart} alt="Heart" />
+        </button>
+        <button onClick={handleAction}>
+          <img src={message} alt="Message" />
+        </button>
+        <button onClick={handleAction}>
+          <img src={share} alt="Share" />
+        </button>
       </div>
     </div>
   );
