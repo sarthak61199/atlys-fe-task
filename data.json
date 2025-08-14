@@ -1,0 +1,35 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "author": "Theresa Webb",
+      "timeAgo": "5 mins ago",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "image": "person-1.jpg"
+    },
+    {
+      "id": 2,
+      "author": "John Doe",
+      "timeAgo": "5 mins ago",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "image": "person-2.jpg"
+    },
+    {
+      "id": 3,
+      "author": "Jane Doe",
+      "timeAgo": "5 mins ago",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "image": "person-3.jpg"
+    }
+  ],
+  "users": [
+    {
+      "email": "demo@example.com",
+      "password": "password123"
+    },
+    {
+      "email": "test@user.com",
+      "password": "testpass"
+    }
+  ]
+}
