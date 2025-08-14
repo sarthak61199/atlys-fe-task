@@ -1,5 +1,11 @@
+import SignInForm from "../components/sign-in-form";
+
 function SignIn() {
-  return <div>SignIn</div>;
+  return (
+    <main className="grid place-items-center h-full">
+      <SignInForm />
+    </main>
+  );
 }
 
 export default SignIn;
