@@ -20,6 +20,7 @@ function Editor() {
           timeAgo: "Just now",
           content: content.trim(),
           image: "person-1.jpg",
+          emoji: "😈",
         });
         setContent("");
       }

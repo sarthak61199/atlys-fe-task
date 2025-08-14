@@ -3,17 +3,17 @@ import message from "../assets/icons/message.svg";
 import share from "../assets/icons/share.svg";
 import { useAuth } from "../contexts/auth-context";
 import { alert } from "../lib/alert";
+import type { Post } from "../types";
 
-interface PostCardProps {
-  author: string;
-  timeAgo: string;
-  content: string;
-  image: string;
-}
-
-function PostCard({ author, timeAgo, content, image }: PostCardProps) {
+function PostCard({
+  author,
+  timeAgo,
+  content,
+  image,
+  emoji,
+}: Omit<Post, "id">) {
   const { requireAuth } = useAuth();
-  
+
   const handleAction = () => {
     requireAuth(alert);
   };
@@ -32,7 +32,7 @@ function PostCard({ author, timeAgo, content, image }: PostCardProps) {
             <span className="text-xs font-medium text-black/35">{timeAgo}</span>
           </div>
           <div className="size-8 p-1 bg-[#F2F2F2] flex justify-center items-center rounded-full">
-            <span className="text-lg">🥴</span>
+            <span className="text-lg">{emoji}</span>
           </div>
           <p className="text-sm">{content}</p>
         </div>

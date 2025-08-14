@@ -2,14 +2,7 @@ import type { ReactNode } from "react";
 import { createContext, useContext, useState } from "react";
 import postsData from "../../data.json";
 import { generateId } from "../lib/utils";
-
-export interface Post {
-  id: number;
-  author: string;
-  timeAgo: string;
-  content: string;
-  image: string;
-}
+import type { Post } from "../types";
 
 interface PostContextType {
   posts: Post[];

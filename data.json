@@ -5,21 +5,24 @@
       "author": "Theresa Webb",
       "timeAgo": "5 mins ago",
       "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "image": "person-1.jpg"
+      "image": "person-1.jpg",
+      "emoji": "🥴"
     },
     {
       "id": 2,
       "author": "John Doe",
       "timeAgo": "5 mins ago",
       "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "image": "person-2.jpg"
+      "image": "person-2.jpg",
+      "emoji": "🤞"
     },
     {
       "id": 3,
       "author": "Jane Doe",
       "timeAgo": "5 mins ago",
       "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "image": "person-3.jpg"
+      "image": "person-3.jpg",
+      "emoji": "💀"
     }
   ],
   "users": [
