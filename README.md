@@ -16,9 +16,7 @@ Built using ReactJS using Vite as the build tool, TypeScript and TailwindCSS wit
   - /sign-in page to login (use test accounts which were provided to sign in)
   - /sign-up page to signup
   - / which is our feed
-- There is no input validation on authentication forms except sign-up page which just checks if the password matches the confirm password field.
-- The signup flow itself just checks if the email is not registered already. If it's not then it logs in the user and redirects to feed page.
-- The user (test accounts which were provided) and post data is hardcoded in data.json file. New posts are kept in state and are not persisted anywhere and is lost if the user refreshes.
+- The user and post data is hardcoded in data.json file. New posts are kept in state and are not persisted anywhere and is lost if the user refreshes.
 - Similarly the authentication state is also stored in memory and the user will have to login again if the page refreshes.
 
 ## Challenges
