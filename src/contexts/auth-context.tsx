@@ -1,10 +1,9 @@
-import React, { createContext, useContext, useState } from "react";
 import type { ReactNode } from "react";
+import React, { createContext, useContext, useState } from "react";
 import data from "../../data.json";
-import { Dialog } from "../components/ui/dialog";
 import AuthForm from "../components/auth-form";
-
-type AuthMode = "sign-in" | "sign-up";
+import { Dialog } from "../components/ui/dialog";
+import type { AuthMode } from "../types";
 
 interface AuthContextType {
   isAuthenticated: boolean;

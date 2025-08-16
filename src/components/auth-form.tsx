@@ -3,18 +3,11 @@ import { useNavigate } from "react-router";
 import login from "../assets/icons/login.svg";
 import { authConfig, fieldConfig } from "../config/auth-config";
 import { useAuth } from "../contexts/auth-context";
+import type { AuthMode, FormData } from "../types";
 import { Input } from "./ui/input";
-
-export type AuthMode = "sign-in" | "sign-up";
 
 export interface AuthFormProps {
   mode: AuthMode;
-}
-
-export interface FormData {
-  emailOrUsername: string;
-  password: string;
-  repeatPassword?: string;
 }
 
 function AuthForm({ mode }: AuthFormProps) {

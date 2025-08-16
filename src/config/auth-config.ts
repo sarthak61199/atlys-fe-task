@@ -1,4 +1,4 @@
-import type { AuthMode, FormData } from "../components/auth-form";
+import type { AuthMode, FormData } from "../types";
 
 export const authConfig = {
   "sign-in": {
