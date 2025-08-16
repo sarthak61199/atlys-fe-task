@@ -1,9 +1,9 @@
 import { useCallback, useState } from "react";
-import deleteIcon from "../assets/icons/delete.svg";
-import emoji from "../assets/icons/emoji.svg";
-import { usePost } from "../contexts/post-context";
-import { useAuth } from "../contexts/auth-context";
-import { alert } from "../lib/alert";
+import deleteIcon from "../../assets/icons/delete.svg";
+import emoji from "../../assets/icons/emoji.svg";
+import { useAuth } from "../../contexts/auth-context";
+import { usePost } from "../../contexts/post-context";
+import { alert } from "../../lib/alert";
 import BottomBar from "./bottom-bar";
 import Toolbar from "./toolbar";
 

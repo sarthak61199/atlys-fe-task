@@ -1,10 +1,10 @@
 import { memo } from "react";
-import plusIcon from "../assets/icons/plus.svg";
-import micIcon from "../assets/icons/mic.svg";
-import cameraIcon from "../assets/icons/camera.svg";
-import sendIcon from "../assets/icons/send.svg";
-import { useAuth } from "../contexts/auth-context";
-import { alert } from "../lib/alert";
+import cameraIcon from "../../assets/icons/camera.svg";
+import micIcon from "../../assets/icons/mic.svg";
+import plusIcon from "../../assets/icons/plus.svg";
+import sendIcon from "../../assets/icons/send.svg";
+import { useAuth } from "../../contexts/auth-context";
+import { alert } from "../../lib/alert";
 
 interface BottomBarProps {
   onSubmit?: () => void;
