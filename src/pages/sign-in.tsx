@@ -1,9 +1,9 @@
-import SignInForm from "../components/sign-in-form";
+import AuthForm from "../components/auth-form";
 
 function SignIn() {
   return (
     <main className="grid place-items-center h-full">
-      <SignInForm />
+      <AuthForm mode="sign-in" />
     </main>
   );
 }

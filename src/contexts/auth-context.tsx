@@ -2,8 +2,7 @@ import React, { createContext, useContext, useState } from "react";
 import type { ReactNode } from "react";
 import data from "../../data.json";
 import { Dialog } from "../components/ui/dialog";
-import SignInForm from "../components/sign-in-form";
-import SignUpForm from "../components/sign-up-form";
+import AuthForm from "../components/auth-form";
 
 type AuthMode = "sign-in" | "sign-up";
 
@@ -90,7 +89,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
         onOpenChange={setShowAuthModal}
         disableInteraction
       >
-        {authMode === "sign-in" ? <SignInForm /> : <SignUpForm />}
+        <AuthForm mode={authMode} />
       </Dialog>
     </AuthContext.Provider>
   );
