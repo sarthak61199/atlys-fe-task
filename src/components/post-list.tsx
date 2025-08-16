@@ -5,7 +5,7 @@ function PostList() {
   const { posts } = usePost();
 
   return (
-    <div className="flex flex-col gap-7 pb-8">
+    <div className="flex flex-col gap-4 md:gap-7 pb-4 md:pb-8">
       {posts.map((post, index) => (
         <div
           key={post.id}

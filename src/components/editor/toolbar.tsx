@@ -18,14 +18,14 @@ function Toolbar() {
   };
 
   return (
-    <div className="bg-[#00000008] p-1 rounded-lg h-10">
-      <div className="flex items-center gap-2 h-full">
+    <div className="bg-[#00000008] p-1 rounded-lg h-8 md:h-10 overflow-hidden">
+      <div className="flex items-center gap-1 md:gap-2 h-full">
         <button
-          className="flex items-center gap-1 shadow bg-white rounded-lg py-2 px-2"
+          className="flex items-center gap-1 shadow bg-white rounded-lg py-1 md:py-2 px-1 md:px-2 flex-shrink-0"
           onClick={handleAction}
         >
-          <span className="text-xs mr-3">Paragraph</span>
-          <img src={chevronDown} alt="chevron down" className="size-2" />
+          <span className="text-[10px] md:text-xs mr-1 md:mr-3 whitespace-nowrap">Paragraph</span>
+          <img src={chevronDown} alt="chevron down" className="size-2 flex-shrink-0" />
         </button>
 
         <ToolbarButton
@@ -41,12 +41,12 @@ function Toolbar() {
           onClick={handleAction}
         />
 
-        <div className="w-px h-8 bg-gray-300"></div>
+        <div className="w-px h-6 md:h-8 bg-gray-300 hidden sm:block"></div>
 
         <ToolbarButton icon={ul} alt="unordered list" onClick={handleAction} />
         <ToolbarButton icon={ol} alt="ordered list" onClick={handleAction} />
 
-        <div className="w-px h-8 bg-gray-300"></div>
+        <div className="w-px h-6 md:h-8 bg-gray-300 hidden sm:block"></div>
 
         <ToolbarButton icon={quote} alt="quote" onClick={handleAction} />
         <ToolbarButton icon={code} alt="code" onClick={handleAction} />

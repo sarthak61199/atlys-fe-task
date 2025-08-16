@@ -4,6 +4,19 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+@media (max-width: 768px) {
+  body {
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  textarea {
+    font-size: 16px;
+  }
+}
+
 @keyframes fade-in {
   from {
     opacity: 0;
